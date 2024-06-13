@@ -1,10 +1,6 @@
 import { Disclosure } from "@headlessui/react";
-// import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { NavLink } from "react-router-dom";
 
-// function classNames(...classes) {
-//   return classes.filter(Boolean).join(" ");
-// }
 
 const Navbar = () => {
   return (
