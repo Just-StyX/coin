@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
+import Coin from "./component/Coin";
+import History from "./component/History";
+import Navbar from "./component/Navbar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+            <BrowserRouter>
+                <Navbar />
+                <Routes>
+                    <Route path="/" element={<Coin />} />
+                    <Route path="/history/:symbol" element={<History />} />
+                </Routes>
+            </BrowserRouter>
+        
+    );
+};
 
 export default App;
